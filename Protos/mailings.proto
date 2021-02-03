@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+option csharp_namespace = "Mailer.API.Protos.Mailings";
+
+package mailer.mailings;
+import "google/protobuf/empty.proto";
+import "recipients.proto";
+import "senders.proto";
+
+service Mailings {
+    rpc GetMailing (GetMailingRequest) returns (Mailing);
+    rpc GetMailings (GetMailingsRequest) returns (stream Mailing);
+    rpc AddMailing (AddMailingRequest) returns (Mailing);
+    rpc SendMailing (SendMailingRequest) returns (stream Mailing);
+    rpc UpdateMailing (UpdateMailingRequest) returns (Mailing);
+    rpc DeleteMailing (DeleteMailingRequest) returns (google.protobuf.Empty);
+}
+
+message Mailing {
+    string id = 1;
+    int32 row_version = 2;
+    repeated mailer.recipients.Recipient recipients = 3;
+    mailer.senders.Sender sender = 4;
+    string subject_template = 5;
+    string plain_body_template = 6;
+    string html_body_template = 7;
+    MailingStatus status = 8;
+}
+
+message MailingStatus {
+    enum MailingStatusCode {
+     DRAFT = 0;
+     IN_PROGRESS = 1;
+     DONE = 2;
+     ACCEPTED = 3;
+	}
+    MailingStatusCode status_code = 1;
+    string message = 2;
+}
+
+message GetMailingRequest {
+    string id = 1;
+}
+
+message GetMailingsRequest { }
+
+message AddMailingRequest {
+    message Data {
+        repeated string recipients_ids = 1;
+        string sender_id = 2;
+        string subject_template = 3;
+        string plain_body_template = 4;
+        string html_body_template = 5;
+    }
+    Data data = 1;
+}
+
+message UpdateMailingRequest {
+    message Data {
+        repeated string recipients_ids = 1;
+        string sender_id = 2;
+        string subject_template = 3;
+        string plain_body_template = 4;
+        string html_body_template = 5;
+	}
+    string id = 1;
+    int32 row_version = 2;
+    Data data = 3;
+}
+
+message DeleteMailingRequest {
+    string id = 1;
+    int32 row_version = 2;
+}
+
+message SendMailingRequest {
+    string id = 1;
+    int32 row_version = 2;
+}

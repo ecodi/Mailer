@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option csharp_namespace = "Mailer.API.Protos.Senders";
+
+package mailer.senders;
+import "google/protobuf/empty.proto";
+
+service Senders {
+    rpc GetSender (GetSenderRequest) returns (Sender);
+    rpc GetSenders (GetSendersRequest) returns (stream Sender);
+    rpc AddSender (AddSenderRequest) returns (Sender);
+    rpc UpdateSender (UpdateSenderRequest) returns (Sender);
+    rpc DeleteSender (DeleteSenderRequest) returns (google.protobuf.Empty);
+}
+
+message Sender {
+    string id = 1;
+    int32 row_version = 2;
+    string email_address = 3;
+    string name = 4;
+}
+
+message GetSenderRequest {
+    string id = 1;
+}
+
+message GetSendersRequest { }
+
+message AddSenderRequest {
+    message Data {
+        string name = 1;
+        string email_address = 2;
+    }
+    Data data = 1;
+}
+
+message UpdateSenderRequest {
+    message Data {
+        string name = 1;
+	}
+    string id = 1;
+    int32 row_version = 2;
+    Data data = 3;
+}
+
+message DeleteSenderRequest {
+    string id = 1;
+    int32 row_version = 2;
+}

@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.Api", "Mailer.Api\Mailer.Api.csproj", "{7DE925F9-5DB8-45A6-9CF0-FFAEFF5D1B97}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.IntegrationTests", "Mailer.IntegrationTests\Mailer.IntegrationTests.csproj", "{E615D6AB-4D9C-4903-BD67-2CA32AB8832A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.Domain", "Mailer.Domain\Mailer.Domain.csproj", "{3A023E23-2B4A-4FE6-96CF-A980C4FC7786}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.Infrastructure", "Mailer.Infrastructure\Mailer.Infrastructure.csproj", "{42A22087-1122-4688-B03F-64C04F0C2944}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.Core", "Mailer.Core\Mailer.Core.csproj", "{4980CDB1-D42D-4551-9C4F-2FBAD513A7B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8985D5CD-0E66-4D63-A9A3-327B7F83D556}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2C6F0273-3903-4263-9471-AC0A2B8F08AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.Domain.Tests", "Mailer.Domain.Tests\Mailer.Domain.Tests.csproj", "{C1EB011F-4F91-42A1-B0FA-6BEF39690F38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.Core.Tests", "Mailer.Core.Tests\Mailer.Core.Tests.csproj", "{FAB652B2-1446-4168-83CE-5D9D221FB136}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailer.Infrastructure.Tests", "Mailer.Infrastructure.Tests\Mailer.Infrastructure.Tests.csproj", "{2395FD8F-71A7-4C82-8678-342EBD3C957E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{8B326353-476E-42F0-A15D-543F330B671D}"
+	ProjectSection(SolutionItems) = preProject
+		Protos\mailings.proto = Protos\mailings.proto
+		Protos\recipients.proto = Protos\recipients.proto
+		Protos\senders.proto = Protos\senders.proto
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DE925F9-5DB8-45A6-9CF0-FFAEFF5D1B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE925F9-5DB8-45A6-9CF0-FFAEFF5D1B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE925F9-5DB8-45A6-9CF0-FFAEFF5D1B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE925F9-5DB8-45A6-9CF0-FFAEFF5D1B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E615D6AB-4D9C-4903-BD67-2CA32AB8832A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E615D6AB-4D9C-4903-BD67-2CA32AB8832A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E615D6AB-4D9C-4903-BD67-2CA32AB8832A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E615D6AB-4D9C-4903-BD67-2CA32AB8832A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A023E23-2B4A-4FE6-96CF-A980C4FC7786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A023E23-2B4A-4FE6-96CF-A980C4FC7786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A023E23-2B4A-4FE6-96CF-A980C4FC7786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A023E23-2B4A-4FE6-96CF-A980C4FC7786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42A22087-1122-4688-B03F-64C04F0C2944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42A22087-1122-4688-B03F-64C04F0C2944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42A22087-1122-4688-B03F-64C04F0C2944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42A22087-1122-4688-B03F-64C04F0C2944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4980CDB1-D42D-4551-9C4F-2FBAD513A7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4980CDB1-D42D-4551-9C4F-2FBAD513A7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4980CDB1-D42D-4551-9C4F-2FBAD513A7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4980CDB1-D42D-4551-9C4F-2FBAD513A7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1EB011F-4F91-42A1-B0FA-6BEF39690F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1EB011F-4F91-42A1-B0FA-6BEF39690F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1EB011F-4F91-42A1-B0FA-6BEF39690F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1EB011F-4F91-42A1-B0FA-6BEF39690F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB652B2-1446-4168-83CE-5D9D221FB136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB652B2-1446-4168-83CE-5D9D221FB136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB652B2-1446-4168-83CE-5D9D221FB136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB652B2-1446-4168-83CE-5D9D221FB136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2395FD8F-71A7-4C82-8678-342EBD3C957E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2395FD8F-71A7-4C82-8678-342EBD3C957E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2395FD8F-71A7-4C82-8678-342EBD3C957E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2395FD8F-71A7-4C82-8678-342EBD3C957E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DE925F9-5DB8-45A6-9CF0-FFAEFF5D1B97} = {8985D5CD-0E66-4D63-A9A3-327B7F83D556}
+		{E615D6AB-4D9C-4903-BD67-2CA32AB8832A} = {2C6F0273-3903-4263-9471-AC0A2B8F08AF}
+		{3A023E23-2B4A-4FE6-96CF-A980C4FC7786} = {8985D5CD-0E66-4D63-A9A3-327B7F83D556}
+		{42A22087-1122-4688-B03F-64C04F0C2944} = {8985D5CD-0E66-4D63-A9A3-327B7F83D556}
+		{4980CDB1-D42D-4551-9C4F-2FBAD513A7B6} = {8985D5CD-0E66-4D63-A9A3-327B7F83D556}
+		{C1EB011F-4F91-42A1-B0FA-6BEF39690F38} = {2C6F0273-3903-4263-9471-AC0A2B8F08AF}
+		{FAB652B2-1446-4168-83CE-5D9D221FB136} = {2C6F0273-3903-4263-9471-AC0A2B8F08AF}
+		{2395FD8F-71A7-4C82-8678-342EBD3C957E} = {2C6F0273-3903-4263-9471-AC0A2B8F08AF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E97DBCA3-90B0-498E-BF9F-F92780615A2F}
+	EndGlobalSection
+EndGlobal

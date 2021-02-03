@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option csharp_namespace = "Mailer.API.Protos.Recipients";
+
+package mailer.recipients;
+import "google/protobuf/empty.proto";
+
+service Recipients {
+    rpc GetRecipient (GetRecipientRequest) returns (Recipient);
+    rpc GetRecipients (GetRecipientsRequest) returns (stream Recipient);
+    rpc AddRecipient (AddRecipientRequest) returns (Recipient);
+    rpc UpdateRecipient (UpdateRecipientRequest) returns (Recipient);
+    rpc DeleteRecipient (DeleteRecipientRequest) returns (google.protobuf.Empty);
+}
+
+message Recipient {
+    string id = 1;
+    int32 row_version = 2;
+    string email_address = 3;
+    string first_name = 4;
+    string last_name = 5;
+}
+
+message GetRecipientRequest {
+    string id = 1;
+}
+
+message GetRecipientsRequest { }
+
+message AddRecipientRequest {
+    message Data {
+        string first_name = 1;
+        string last_name = 2;
+        string email_address = 3;
+    }
+    Data data = 1;
+}
+
+message UpdateRecipientRequest {
+    message Data {
+        string first_name = 1;
+        string last_name = 2;
+	}
+    string id = 1;
+    int32 row_version = 2;
+    Data data = 3;
+}
+
+message DeleteRecipientRequest {
+    string id = 1;
+    int32 row_version = 2;
+}
